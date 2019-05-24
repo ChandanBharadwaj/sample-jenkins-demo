@@ -3,5 +3,6 @@
 stage('Demo') {
     echo 'Hello world'
     sayHello 'Dave'
+    pushGitRepo
     gitCommit 'Sample Commit Message'
 }
