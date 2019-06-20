@@ -1,6 +1,6 @@
 def pipelineShared = ''
 node(){
-            pipelineShared = load 'pipelineShared.groovy'
+            pipelineShared = load 'sample.groovy'
           
 		}
-		  pipelineShared.runJenkinsPipeline(buildScript)
+		  pipelineShared.runJenkinsPipeline()
