@@ -1,7 +1,7 @@
 def runJenkinsPipeline(buildScript) {
  println "Sample Groovy Script testing "
   stage("upload") {
-        def inputFile = input message: 'Upload file', parameters: [file(name: 'C:\Users\vinutha.g\Desktop\application.properties')]
+        def inputFile = input message: 'Upload file', parameters: [file(name: 'INPUT_FILE')]
         new hudson.FilePath(new File("$workspace/application.properties")).copyFrom(inputFile)
         inputFile.delete()
        println "File uploaded succesfully"
